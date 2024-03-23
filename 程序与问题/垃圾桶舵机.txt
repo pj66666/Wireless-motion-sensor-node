@@ -1,0 +1,50 @@
+上  减小是往左
+右1 减小是往有害垃圾；增大可回收
+左 减小是厨余垃圾；增大其他垃圾
+
+
+
+平衡
+set_servo_angle(7,90)  #you two
+set_servo_angle(8,77)  #shang
+set_servo_angle(11,92) #zuo 1
+新平衡
+#set_servo_angle(11,96) 
+#set_servo_angle(8,80)
+#set_servo_angle(7,95) 
+
+
+可回收 上1  减小   下左舵机增大
+
+
+set_servo_angle(8,50)  #shang
+set_servo_angle(11,130) #zuo 1
+time.sleep(2)
+set_servo_angle(8,80)  #shang
+set_servo_angle(11,96) #zuo 1
+
+有害 上1  减小   下左舵机减小
+
+set_servo_angle(8,50)  #shang
+set_servo_angle(11,66) #zuo 1
+time.sleep(2)
+set_servo_angle(8,80)  #shang
+set_servo_angle(11,96) #zuo 1
+
+厨余垃圾  上增大  下右减小（先转后平衡）
+set_servo_angle(7,55)  
+set_servo_angle(8,125) 
+time.sleep(3)
+set_servo_angle(7,95)  
+set_servo_angle(8,80)  
+
+其它垃圾  上增大  下右增大
+pwm.set_pwm_freq(50)
+set_servo_angle(7,125)  #you two
+set_servo_angle(8,125)  #shang
+time.sleep(3)
+set_servo_angle(7,95)  #you two
+set_servo_angle(8,80)  #shang
+
+
+https://blog.csdn.net/qq_42747705/article/details/105576324?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161673678816780261985054%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161673678816780261985054&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-5-105576324.pc_search_positive&utm_term=PCA9685%E5%8F%82%E6%95%B0%E8%A7%A3%E9%87%8A
